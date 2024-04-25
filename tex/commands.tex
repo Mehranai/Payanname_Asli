@@ -18,8 +18,6 @@
 % بسته‌ای برای رسم کادر
 \usepackage{framed} 
 \usepackage{tabularx}
-% بسته برای هایلایت
-\usepackage{soul}
 % بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
 \usepackage{lastpage}
 % بسته‌ٔ لازم برای: ۱. تغییر شماره‌گذاری صفحات پیوست. ۲. تصحیح باگ آدرس وب حاوی '%' در مراجع
@@ -83,6 +81,7 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 \usepackage{tabulary}
 \usepackage{tabularx}
 \usepackage{rotating}
+
 % بسته‌های لازم برای رسم تنظیم بهتر شکل‌ها و زیرشکل‌ها
 \usepackage[export]{adjustbox}
 \usepackage{subfig}
@@ -102,18 +101,16 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 
 % بسته‌ای برای افزودن تورفتگی به ابتدای اولین پاراگراف هر بخش
 \usepackage{indentfirst}
-
 % بسته زیر باگ ناشی از فراخوانی بسته‌های زیاد را برطرف می‌کند.
 \usepackage{morewrites}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+%error
 \usepackage{fontspec}
 \usepackage{bidi}
-
+% پکیج درست کردن فهرست مراجع
+\usepackage[nottoc]{tocbibind}
 % فراخوانی بسته زی‌پرشین (باید آخرین بسته باشد)
-\usepackage[extrafootnotefeatures, localise=on, displaymathdigits=persian,perpagefootnote=on]{xepersian}
-
-
-
+\usepackage[extrafootnotefeatures, localise=on, displaymathdigits=persian]{xepersian}
 
 \makeatletter
 % تعریف قلم فارسی و انگلیسی و مکان قلم‌ها
@@ -194,6 +191,8 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 \newtheorem{remark}[definition]{ملاحظه}
 \theoremstyle{definition}
 \newtheorem{example}[definition]{مثال}
+
+
 
 %\renewcommand{\theequation}{\thechapter-\arabic{equation}}
 %\def\bibname{مراجع}
