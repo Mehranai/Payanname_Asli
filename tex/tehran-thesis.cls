@@ -155,7 +155,22 @@
 \par
 {\Large\bfseries \@firstsupervisor{} و \@secondsupervisor}
 \fi\fi}
+\par\large
+{\ifx\@firstadvisor\undefined%
+\ifx\@secondadvisor\undefined%
+\else\fi
+\else
+\ifx\@secondadvisor\undefined%
+استاد مشاور
+{\Large\bfseries\par
+\@firstadvisor}
+\else
 
+\large
+استادان مشاور
+\par
+{\Large\bfseries\@firstadvisor{} و \@secondadvisor}
+\fi\fi}
 
 \par
 \vskip 6mm
