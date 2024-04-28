@@ -471,12 +471,56 @@ inner xsep=-1.3cm,inner ysep=0.4cm]
 \newcommand\abstractPage{
 	\cleardoublepage
 	\thispagestyle{empty}
-	\section*{چکیده}
-	% \addcontentsline{toc}{section}{چکیده}
-	\@fa-abstract
-	\par\noindent
-	\paragraph{واژگان کلیدی}
-	\@keywords
+	\begin{table}[ht!]
+		\begin{tabular}{| p{1.0\textwidth} |}
+			\hline
+			\textbf{نام خانوادگی دانشجو :} شاه محمدی
+			\hspace{0.5cm}
+			\textbf{نام :} مهران
+			\\ 
+			\hline
+			\textbf{عنوان پایان نامه :}
+			\@title
+			\vspace{5pt} \\ 
+			\hline
+			\textbf{استاد راهنما :}
+			\@firstsupervisor \\
+			\textbf{استاد مشاور :}
+			\@firstadvisor
+			\vspace{5pt} \\
+			\hline
+			\textbf{مقطع تحصیلی :} کارشناسی ارشد
+			\hspace{0.5cm}
+			\textbf{رشته :} مهندسی کامپیوتر
+			\hspace{0.5cm}
+			\textbf{گرایش :} معماری سیستم‌های کامپیوتری
+			\\
+			\textbf{دانشگاه :} تبریز
+			\hspace{0.8cm}
+			\textbf{دانشکده :} مهندسی برق و کامپیوتر
+			\\
+			\textbf{تاریخ فارغ التحصیلی : } اردیبهشت ماه 1403
+			\hspace{0.5cm}
+			\textbf{تعداد صفحه : 72}
+			\vspace{5pt} \\
+			\hline
+			\textbf{کلید واژه‌ ها :}
+			\@keywords
+			\vspace{5pt} \\
+			\hline
+			\textbf{چکیده :}
+			
+			\@fa-abstract
+			\vspace{5pt} \\
+			\hline
+		\end{tabular}
+	\end{table}
+	%\section*{چکیییییده}
+	%\addcontentsline{toc}{section}{چکیده}
+	%\@fa-abstract
+	%\par\noindent
+	%\paragraph{واژگان کلیدی}
+	%\@keywords
 }
 
 \def\latinabstract{
@@ -486,13 +530,56 @@ inner xsep=-1.3cm,inner ysep=0.4cm]
 ~
 \newpage
 \thispagestyle{empty}
-\section*{Abstract}
+\begin{table}[ht!]
+	\begin{tabular}{| p{1.0\textwidth} |}
+		\hline
+		\textbf{Student Family Name :} \@latinsurname
+		\hspace{0.5cm}
+		\textbf{First Name :} \@latinname
+		\\ 
+		\hline
+		\textbf{Thesis Subject :}
+		\@latintitle
+		\vspace{2pt} \\ 
+		\hline
+		\textbf{Supervisor :}
+		\@firstlatinsupervisor \\
+		\textbf{Advisor :}
+		\@firstlatinadvisor
+		\vspace{2pt} \\
+		\hline
+		\textbf{Grade :} Master of Science
+		\hspace{0.5cm}
+		\textbf{Student Field of study :} \@latinsubject
+		\\
+		\textbf{University :} University of Tabriz
+		\hspace{0.8cm}
+		\textbf{Faculty :} Electrical and Computer Engineering
+		\\
+		\textbf{Graduate Date : }
+		\lr{May 2024}
+		\hspace{0.5cm}
+		\textbf{Page Number : 72}
+		\vspace{2pt} \\
+		\hline
+		\textbf{Keywords :}
+		\@latinkeywords
+		\vspace{2pt} \\
+		\hline
+		\textbf{Abstract :}
+		
+		\@en-abstract
+		\vspace{2pt} \\
+		\hline
+	\end{tabular}
+\end{table}
+%\section*{Abstract}
 % \addcontentsline{toc}{section}{چکیده}
-\@en-abstract
-\par
-\noindent
-\paragraph{Keywords}
-\@latinkeywords
+%\@en-abstract
+%\par
+%\noindent
+%\paragraph{Keywords}
+%\@latinkeywords
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

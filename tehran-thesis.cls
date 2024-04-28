@@ -456,12 +456,55 @@ inner xsep=-1.3cm,inner ysep=0.4cm]
 \newcommand\abstractPage{
 	\cleardoublepage
 	\thispagestyle{empty}
-	\section*{چکیده}
+	\begin{table}[h]
+		\small
+		\begin{onehalfspacing}
+			\begin{tabular}{| >{\centering\arraybackslash}m{0.03\textwidth} | >{\centering\arraybackslash}m{.17\textwidth} | >{\centering\arraybackslash}m{.17\textwidth} |>{\centering\arraybackslash}m{.1\textwidth}|>{\centering\arraybackslash}m{.2\textwidth}|>{\centering\arraybackslash}m{.15\textwidth}|}
+				\hline
+				{\bfseries\begin{sideways}ردیف\end{sideways}} & {\bfseries مشخصات هیأت داوران} & {\bfseries نام و نام خانوادگی} & {\bfseries مرتبهٔ دانشگاهی} &	{\bfseries دانشگاه یا مؤسسه} & {\bfseries امضا} \\
+				\hline
+				\ifx\@firstsupervisor\undefined
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} &	استاد راهنما & \@firstsupervisor & \@firstsupervisorrank & دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\fi
+				\ifx\@secondsupervisor\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} &	استاد راهنما & \@secondsupervisor & \@secondsupervisorrank & دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\fi
+				\hline
+				\ifx\@firstadvisor\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} & استاد مشاور & \@firstadvisor & \@firstadvisorrank & دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\fi
+				\ifx\@secondadvisor\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} & استاد مشاور & \@secondadvisor & \@secondadvisorrank & دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\fi
+				\hline
+				\ifx\@internaljudge\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} & استاد داور داخلی & \@internaljudge & \@internaljudgerank & دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\hline
+				\fi
+				\ifx\@externaljudge\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} & استاد مدعو & \@externaljudge & \@externaljudgerank & \@externaljudgeuniversity & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\hline
+				\fi
+				\ifx\@graduatedeputy\undefined%
+				\else \stepcounter{davaranCounter}
+				\arabic{davaranCounter} & نمایندهٔ تحصیلات تکمیلی دانشکده & \@graduatedeputy & \@graduatedeputyrank &  دانشگاه تبریز & \rule[-.3\baselineskip]{0pt}{2\normalbaselineskip} \\
+				\hline
+				\fi
+			\end{tabular}
+		\end{onehalfspacing}
+	\end{table}
+	%\section*{چکیده}
 	% \addcontentsline{toc}{section}{چکیده}
-	\@fa-abstract
-	\par\noindent
-	\paragraph{واژگان کلیدی}
-	\@keywords
+	%\@fa-abstract
+	%\par\noindent
+	%\paragraph{واژگان کلیدی}
+	%\@keywords
 }
 
 \def\latinabstract{
